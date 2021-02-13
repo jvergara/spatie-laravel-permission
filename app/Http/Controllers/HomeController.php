@@ -28,6 +28,21 @@ class HomeController extends Controller
     {
         //Role::create(['name' => 'writer']);
         //Permission::create(['name' => 'write post']);
+        //relacionar permiso y rol
+        /*$role = Role::findById(1);
+        $permission = Permission::findById(1);
+        $role->givePermissionTo($permission);*/
+
+        // rol de escribir (1) con permiso de editar post
+        /*$permission = Permission::create(['name' => 'edit post']);
+        $role = Role::findById(1);
+        $role->givePermissionTo($permission);*/
+
+        //remover rol 1 (escribir) del permiso 2 (editar post)
+        $role = Role::findById(1);
+        $permission = Permission::findById(2);
+        $permission->removeRole($role);
+       
         return view('home');
     }
 }

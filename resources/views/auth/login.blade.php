@@ -63,6 +63,8 @@
                                     </a>
                                 @endif
                             </div>
+                            <small>juanboris.ver...</small>
+                            <small>000111</small>
                         </div>
                     </form>
                 </div>
